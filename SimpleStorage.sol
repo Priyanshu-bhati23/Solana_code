@@ -28,7 +28,7 @@ contract SimpleStorage {
     }
 
     // Function to store a favourite number
-    function store(uint256 _favourite) public {
+    function store(uint256 _favourite) public virtual{
         favouriteNumber = _favourite;
         retrieve();
     }
@@ -39,6 +39,10 @@ contract SimpleStorage {
         return favouriteNumber;
     }
 }
+
+contract SimpleStorage2 {}
+contract SimpleStorage3 {}
+contract SimpleStorage4 {}
 
 //memory is stored temporily,can be changed
 //call data cannot be changed,stored temporily
